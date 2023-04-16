@@ -1,0 +1,41 @@
+:root {
+  --theme-color: #4a8e9b;
+  --theme-hi-color: #a34119;
+  --theme-icon-color: #4a8e9b;
+  --theme-hover-color: #57a5b5;
+  --button-bg-color: #004c59;
+  --button-bg-hover-color: #bae4ec;
+  --button-font-color: #fff;
+  --button-font-hover-color: #fff;
+
+  --select-text-bg-color: #2196f3;
+  --select-text-font-color: #fff;
+
+  --link-color: #555555;
+  --link-hover-color: #4a8e9b;
+
+  --product-title-link-color: #333;
+  --product-title-link-hover-color: #4a8e9b;
+
+  --footer-bg-color: #4a8e9b;
+  --footer-text-color: #000;
+  --footer-icon-color: #000;
+  --footer-hover-color: #000;
+  --primary-color-dark: #24444b;
+  --primary-color-light: #66c2d5;
+  --primary-color-lighter: #eaf7f9;
+  --primary-color-green: green;
+}
+
+$baseColor: #4a8e9b;
+$baseFontColor: #fff;
+
+$baseHoverColor: #57a5b5;
+$baseHoverFontColor: #fff;
+
+$LinkColor: #4a8e9b;
+$darkOrange: #24444b;
+
+$selectAttributeBorderColor: #4a8e9b;
+$dark1: #000000;
+$white: #fff;
