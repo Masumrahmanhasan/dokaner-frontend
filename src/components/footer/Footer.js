@@ -81,7 +81,7 @@ const Footer = (props) => {
                       <Link to='/login'>Sign In</Link>
                     </li>
                     <li>
-                      <Link to='/special-offer'>Special Offer</Link>
+                      <Link to='/pages/special-offer'>Special Offer</Link>
                     </li>
                     <li>
                       <Link to='/checkout'>View Cart</Link>
