@@ -39,20 +39,21 @@ const Invoice = (props) => {
 
   const getTotalShippingCharge = () => {
     let due = 0;
-    invoiceItems.map((item) => {
-      due += Number(item.order_item.shipping_charge);
-      return false;
-    });
+    // invoiceItems.map((item) => {
+    //   due += Number(item.order_item.shipping_charge);
+    //   return false;
+    // });
     return numberWithCommas(due);
   };
 
   const getTotalProductdue = () => {
     let due = 0;
-    invoiceItems.map((item) => {
-      const order_item = item.order_item;
-      due += Number(item.total_due) - Number(order_item.shipping_charge);
-      return false;
-    });
+    // invoiceItems.map((item) => {
+    //   const order_item = item.order_item;
+    //   console.log(order_item);
+    //   due += Number(item.total_due) - Number(order_item.shipping_charge);
+    //   return false;
+    // });
 
     return numberWithCommas(due);
   };
@@ -209,20 +210,26 @@ const Invoice = (props) => {
                           </thead>
                           <tbody>
                             {invoiceItems.map((item, index) => {
-                              const order_item = item.order_item;
+                              // const order_item = item.order_item;
+                              
                               return (
                                 <tr>
                                   {index === 0 && <td rowSpan='0'></td>}
                                   <td className='text-center'>{item.order_item_id}</td>
                                   <td className='text-center'>{item.weight}</td>
-                                  <td classrowSpan='text-center'>৳ {order_item.shipping_rate}</td>
-                                  <td className='text-center'>৳ {order_item.shipping_charge}</td>
+                                  <td classrowSpan='text-center'>৳ 0</td>
+                                  <td className='text-center'>৳ 0</td>
+                                  {/* <td classrowSpan='text-center'>৳ {order_item.shipping_rate}</td> */}
+                                  {/* <td className='text-center'>৳ {order_item.shipping_charge}</td> */}
                                   <td className='text-center'>
+                                    ৳ {item.total_due}
+                                  </td>
+                                  {/* <td className='text-center'>
                                     ৳{" "}
                                     {numberWithCommas(
                                       Number(item.total_due) - Number(order_item.shipping_charge)
                                     )}
-                                  </td>
+                                  </td> */}
                                   <td className='text-center'>৳ {item.total_due}</td>
                                   {index === 0 && (
                                     <td
